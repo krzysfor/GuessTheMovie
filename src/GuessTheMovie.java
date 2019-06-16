@@ -90,7 +90,7 @@ public class GuessTheMovie {
                 czykoniec = false;
             } else {
                 czykoniec = true;
-                System.out.println("WYGRALES");
+                System.out.println("W Y G R A L E S ! ! !");
                 break;
 
             }
