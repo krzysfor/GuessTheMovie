@@ -42,9 +42,7 @@ public class GuessTheMovie {
 
         int licznikKresekFilmu = podmienianyTytulFilmu.length();
         int licznikTrafionychLiter = 0;
-        int licznikNieTrafionychLiter = 0;
         boolean czykoniec = false;
-
 
 
         System.out.println("Twoim zadaniem jest zgadnac tytul filmu. ") ;
@@ -58,6 +56,7 @@ public class GuessTheMovie {
             System.out.println("Wpisz litere: ");
 
             char literaUzytkownika = scannerLitera.next().charAt(0);
+
 
             // dodanie do listy wszystkich wpsanych przez uzytkownika liter
             String wpisanaLitera = Character.toString(literaUzytkownika);
@@ -76,7 +75,6 @@ public class GuessTheMovie {
                     licznikTrafionychLiter++;
 
                 }
-
             }
 
             System.out.println("Trafiles : "+ licznikTrafionychLiter);
@@ -96,12 +94,12 @@ public class GuessTheMovie {
                 break;
 
             }
-
         }
 
-        if (licznikKresekFilmu == 0 || !czykoniec) {
+        if (licznikKresekFilmu == 0 && !czykoniec) {
             System.out.println(" P R Z E G R A L E S ! ! ! ");
+            System.out.println("Szukany tytul filmu to : "+ wylosowanyTytulFilmu);
         }
-        System.out.println("Szukany tytul filmu to : "+ wylosowanyTytulFilmu);
+
     }
 }
