@@ -9,10 +9,10 @@ public class GuessTheMovie {
     File file = new File("listaFilmow.txt");
     Scanner scanner = new Scanner(file);
     Scanner scannerLitera = new Scanner(System.in);
-    ArrayList<String> list = new ArrayList<String>();
-    ArrayList<String> convertList = new ArrayList<String>();
-    ArrayList<String> userList = new ArrayList<String>();
-    ArrayList<String> letterList = new ArrayList<String>();
+    ArrayList<String> list = new ArrayList<>();
+    ArrayList<String> convertList = new ArrayList<>();
+    ArrayList<String> userList = new ArrayList<>();
+    ArrayList<String> letterList = new ArrayList<>();
 
 
     // utworzenie listy filow pobranych z pliku
@@ -33,6 +33,7 @@ public class GuessTheMovie {
 
     }
 
+
     // losowanie filmu z listy
         int randomNumber = (int) (Math.random() * rozmiarListy);
 
@@ -43,6 +44,7 @@ public class GuessTheMovie {
         int licznikTrafionychLiter = 0;
         int licznikNieTrafionychLiter = 0;
         boolean czykoniec = false;
+
 
 
         System.out.println("Twoim zadaniem jest zgadnac tytul filmu. ") ;
@@ -95,7 +97,10 @@ public class GuessTheMovie {
 
             }
 
+        }
 
+        if (licznikKresekFilmu == 0 || !czykoniec) {
+            System.out.println(" P R Z E G R A L E S ! ! ! ");
         }
         System.out.println("Szukany tytul filmu to : "+ wylosowanyTytulFilmu);
     }
